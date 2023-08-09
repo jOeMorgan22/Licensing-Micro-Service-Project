@@ -1,0 +1,572 @@
+{
+	"info": {
+		"_postman_id": "8cc88a67-60f3-4742-8146-4d16ec8df46f",
+		"name": "License Micro Service Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24423487",
+		"_collection_link": "https://www.postman.com/jpmo244/workspace/ipm-manager-documentation/collection/24423487-8cc88a67-60f3-4742-8146-4d16ec8df46f?action=share&creator=24423487&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "License Service",
+			"item": [
+				{
+					"name": "Add New License",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzc0I1RDhGVVh5ZVBFc1dIRV9VQlVDV3VHR2YyWldsaldwNFlsSVV6RlNrIn0.eyJleHAiOjE2ODk4NjgwMzQsImlhdCI6MTY4OTg2NzczNCwianRpIjoiODM2NDRmYjktZDQ5MC00ZWFlLTk4YjctZjc5YTUxYWUwN2Q0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA0ZTIwYzc2LWMzZTItNDI3OS04YTY2LTRmNjMwNDlkM2EyZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1vY2stc29mdHdhcmUtbGljZW5zaW5nLXByb2plY3QiLCJzZXNzaW9uX3N0YXRlIjoiNDBhYTNmNmItMTdjMC00ZTZmLWJiYWUtNjYyYjdmNTM1OTFlIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibW9jay1zb2Z0d2FyZS1saWNlbnNpbmctcHJvamVjdCI6eyJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjQwYWEzZjZiLTE3YzAtNGU2Zi1iYmFlLTY2MmI3ZjUzNTkxZSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3NlcGhtb3JnYW44NCIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiJ9.l3CcuE8yfLpcv-U7Cx2DxY_2hSJ_28AFEbjKgzTpkCUnubANAYL-GJoUx8U6Nl8Lb3ptLEF0g6iRrPCMFGykO8B7aOYfpACJs2OUVEoFa-1usEZuxuWpfLP2UoKzU15LvqJ-Jg-uVVieJol8myfmQNT-tmtCzs8E0Zqk0_L4pz-GFht6TFGnYERfcgBcHCQiMIA8F7DxCHExYif0bgazED4jhVCX9nLmiNNbNkZ_6hG_zr5y2cZb8Rdzdbtr5W2-WF8ZKuFmRtKj4F8DvuAfZkZj1Ffk7R0Ke0IJH6p11lPudqoi4rKECdckS1jMaPASvo5YlDZ8QntuYF_FeOfLhQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"licenseType\" : \"education\",\n    \"productName\" : \"fake test\",\n    \"description\" : \"Customer may use bingo card ad for any business means\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8071/license/v1/organization/softwareorganization3/add-license",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"license",
+								"v1",
+								"organization",
+								"softwareorganization3",
+								"add-license"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Licenses By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/v1/organization/company/license/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"organization",
+								"company",
+								"license",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Licenses By Product Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/v1/organization/company3/license/product-name/real-test",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"organization",
+								"company3",
+								"license",
+								"product-name",
+								"real-test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Licenses By Organization Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/v1/organization/company3/license",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"organization",
+								"company3",
+								"license"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Licenses By License Type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzc0I1RDhGVVh5ZVBFc1dIRV9VQlVDV3VHR2YyWldsaldwNFlsSVV6RlNrIn0.eyJleHAiOjE2ODk4NjgwMzQsImlhdCI6MTY4OTg2NzczNCwianRpIjoiODM2NDRmYjktZDQ5MC00ZWFlLTk4YjctZjc5YTUxYWUwN2Q0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA0ZTIwYzc2LWMzZTItNDI3OS04YTY2LTRmNjMwNDlkM2EyZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1vY2stc29mdHdhcmUtbGljZW5zaW5nLXByb2plY3QiLCJzZXNzaW9uX3N0YXRlIjoiNDBhYTNmNmItMTdjMC00ZTZmLWJiYWUtNjYyYjdmNTM1OTFlIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibW9jay1zb2Z0d2FyZS1saWNlbnNpbmctcHJvamVjdCI6eyJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjQwYWEzZjZiLTE3YzAtNGU2Zi1iYmFlLTY2MmI3ZjUzNTkxZSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3NlcGhtb3JnYW44NCIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiJ9.l3CcuE8yfLpcv-U7Cx2DxY_2hSJ_28AFEbjKgzTpkCUnubANAYL-GJoUx8U6Nl8Lb3ptLEF0g6iRrPCMFGykO8B7aOYfpACJs2OUVEoFa-1usEZuxuWpfLP2UoKzU15LvqJ-Jg-uVVieJol8myfmQNT-tmtCzs8E0Zqk0_L4pz-GFht6TFGnYERfcgBcHCQiMIA8F7DxCHExYif0bgazED4jhVCX9nLmiNNbNkZ_6hG_zr5y2cZb8Rdzdbtr5W2-WF8ZKuFmRtKj4F8DvuAfZkZj1Ffk7R0Ke0IJH6p11lPudqoi4rKECdckS1jMaPASvo5YlDZ8QntuYF_FeOfLhQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8071/license/v1/organization/license-by-type/education",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"license",
+								"v1",
+								"organization",
+								"license-by-type",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Licenses By Product Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/v1/organization/license-by-product-name/real-test",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"organization",
+								"license-by-product-name",
+								"real-test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organization Service",
+			"item": [
+				{
+					"name": "Create Organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzc0I1RDhGVVh5ZVBFc1dIRV9VQlVDV3VHR2YyWldsaldwNFlsSVV6RlNrIn0.eyJleHAiOjE2ODk4Njc2NjgsImlhdCI6MTY4OTg2NzM2OCwianRpIjoiZjYyYjYyYTQtN2EwMS00MjQ5LWJiOWQtZjE4ZTdiYTJiMTk0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA0ZTIwYzc2LWMzZTItNDI3OS04YTY2LTRmNjMwNDlkM2EyZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1vY2stc29mdHdhcmUtbGljZW5zaW5nLXByb2plY3QiLCJzZXNzaW9uX3N0YXRlIjoiNDUwOTYzNzktNDgwNS00ZjE4LWFiMWItZTRlYzEwYzYwMGYyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibW9jay1zb2Z0d2FyZS1saWNlbnNpbmctcHJvamVjdCI6eyJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ1MDk2Mzc5LTQ4MDUtNGYxOC1hYjFiLWU0ZWMxMGM2MDBmMiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3NlcGhtb3JnYW44NCIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiJ9.jSLZznLrA6pn4w_e08VHV9yB5FgKU4Wvayqb_bhTtW0Z0-VqsZx2yxXx-zqQZoEPq3GQBl7UjnQjkrRe5UAP4ocM_YHHsSRAiCqTJEaqvoJj26vZQ36IT-uMh52oJ6Bfn3GAZGzbHBIovuoQjTA4l--lng_S5L-S9qi4d6oMveBm1Xf3LtqPx46RRfNPVEfFRTEQ7lhQBZ2vzks6DEvrYZ7HQflNuVDs7b1GHiyhSZDVw3KFNQAoDV4Lfq_LIKW2qaYUsyUk99iCm-n1hV4z3qlwJWVYK5uGzVLJW_V1KcCOEyAuO43jFWPqA_b76owPF2kDpq9JWIPLGi8D-zVVmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"organizationName\" : \"SoftWareOrganization3\",\n    \"contactName\" : \"Jim Bob\",\n    \"email\" : \"email3@gmail.com\",\n    \"phoneNumber\" : \"5124567354\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8071/organization/v1/organization",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"organization",
+								"v1",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzc0I1RDhGVVh5ZVBFc1dIRV9VQlVDV3VHR2YyWldsaldwNFlsSVV6RlNrIn0.eyJleHAiOjE2ODk4MTYzNDcsImlhdCI6MTY4OTgxNjA0NywianRpIjoiNWJhZjBhMWYtOTFhMy00NjNiLWIzNTQtNWExYTQyNWU5MGZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA0ZTIwYzc2LWMzZTItNDI3OS04YTY2LTRmNjMwNDlkM2EyZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1vY2stc29mdHdhcmUtbGljZW5zaW5nLXByb2plY3QiLCJzZXNzaW9uX3N0YXRlIjoiZmU0OTY2ZTgtNGRjNi00Nzk5LTkwMGQtNmFjOTM3MzNiYThiIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibW9jay1zb2Z0d2FyZS1saWNlbnNpbmctcHJvamVjdCI6eyJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImZlNDk2NmU4LTRkYzYtNDc5OS05MDBkLTZhYzkzNzMzYmE4YiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3NlcGhtb3JnYW44NCIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiJ9.bErtHwCb5Kr3ETxQ8Mna0x4YQyBFEYkL8xdBGNlDPnec0DT5TzvBGRJ0v89GAXYQVqOWle89UR6k-CCGHyWUOQ8WbpX3CGjAoX_8uQ6joPD1FSTo4bEhyk93tLu6v4gWIjvg3EP2c01xSluyxmwaLF6tygbyEAZ-SigjH85ZH_q4WO0ylUYszGL8h6iBBdXAiAua3f3E9SVDdXVSpcCi2AG0iau6OyicCr_tlkyvex2xNkiSKk35uZWP-BC047qj75dhpofFDlWWouaNzYY8HEcw5FkyX4r5XFAmFSjQwVbY38gkkPuC9QS0hI0EeLtzpDtVIBQVNl6Vm2F3r5-qNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8071/organization/v1/organization/softwareorganization3",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"organization",
+								"v1",
+								"organization",
+								"softwareorganization3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzc0I1RDhGVVh5ZVBFc1dIRV9VQlVDV3VHR2YyWldsaldwNFlsSVV6RlNrIn0.eyJleHAiOjE2ODk4Njc2NjgsImlhdCI6MTY4OTg2NzM2OCwianRpIjoiZjYyYjYyYTQtN2EwMS00MjQ5LWJiOWQtZjE4ZTdiYTJiMTk0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA0ZTIwYzc2LWMzZTItNDI3OS04YTY2LTRmNjMwNDlkM2EyZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1vY2stc29mdHdhcmUtbGljZW5zaW5nLXByb2plY3QiLCJzZXNzaW9uX3N0YXRlIjoiNDUwOTYzNzktNDgwNS00ZjE4LWFiMWItZTRlYzEwYzYwMGYyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibW9jay1zb2Z0d2FyZS1saWNlbnNpbmctcHJvamVjdCI6eyJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ1MDk2Mzc5LTQ4MDUtNGYxOC1hYjFiLWU0ZWMxMGM2MDBmMiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3NlcGhtb3JnYW44NCIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiJ9.jSLZznLrA6pn4w_e08VHV9yB5FgKU4Wvayqb_bhTtW0Z0-VqsZx2yxXx-zqQZoEPq3GQBl7UjnQjkrRe5UAP4ocM_YHHsSRAiCqTJEaqvoJj26vZQ36IT-uMh52oJ6Bfn3GAZGzbHBIovuoQjTA4l--lng_S5L-S9qi4d6oMveBm1Xf3LtqPx46RRfNPVEfFRTEQ7lhQBZ2vzks6DEvrYZ7HQflNuVDs7b1GHiyhSZDVw3KFNQAoDV4Lfq_LIKW2qaYUsyUk99iCm-n1hV4z3qlwJWVYK5uGzVLJW_V1KcCOEyAuO43jFWPqA_b76owPF2kDpq9JWIPLGi8D-zVVmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"organizationName\" : \"SoftWareBusiness3\",\n    \"contactName\" : \"Jimmy John\",\n    \"email\" : \"newemail3@gmail.com\",\n    \"phoneNumber\" : \"5124567354\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8071/organization/v1/organization/update/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"organization",
+								"v1",
+								"organization",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzc0I1RDhGVVh5ZVBFc1dIRV9VQlVDV3VHR2YyWldsaldwNFlsSVV6RlNrIn0.eyJleHAiOjE2ODk4Njc2NjgsImlhdCI6MTY4OTg2NzM2OCwianRpIjoiZjYyYjYyYTQtN2EwMS00MjQ5LWJiOWQtZjE4ZTdiYTJiMTk0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA0ZTIwYzc2LWMzZTItNDI3OS04YTY2LTRmNjMwNDlkM2EyZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1vY2stc29mdHdhcmUtbGljZW5zaW5nLXByb2plY3QiLCJzZXNzaW9uX3N0YXRlIjoiNDUwOTYzNzktNDgwNS00ZjE4LWFiMWItZTRlYzEwYzYwMGYyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1saWNlbnNpbmctbWljcm9zZXJ2aWNlLXJlYWxtIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibW9jay1zb2Z0d2FyZS1saWNlbnNpbmctcHJvamVjdCI6eyJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ1MDk2Mzc5LTQ4MDUtNGYxOC1hYjFiLWU0ZWMxMGM2MDBmMiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb3NlcGhtb3JnYW44NCIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiJ9.jSLZznLrA6pn4w_e08VHV9yB5FgKU4Wvayqb_bhTtW0Z0-VqsZx2yxXx-zqQZoEPq3GQBl7UjnQjkrRe5UAP4ocM_YHHsSRAiCqTJEaqvoJj26vZQ36IT-uMh52oJ6Bfn3GAZGzbHBIovuoQjTA4l--lng_S5L-S9qi4d6oMveBm1Xf3LtqPx46RRfNPVEfFRTEQ7lhQBZ2vzks6DEvrYZ7HQflNuVDs7b1GHiyhSZDVw3KFNQAoDV4Lfq_LIKW2qaYUsyUk99iCm-n1hV4z3qlwJWVYK5uGzVLJW_V1KcCOEyAuO43jFWPqA_b76owPF2kDpq9JWIPLGi8D-zVVmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8071/organization/v1/organization/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"organization",
+								"v1",
+								"organization",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Config Server",
+			"item": [
+				{
+					"name": "Organization-Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/organization-service/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"organization-service",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "License-Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/license-service/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"license-service",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Demo-Gateway Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/demo-gateway/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"demo-gateway",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Eureka-Service-Discovery",
+			"item": [
+				{
+					"name": "License-Service Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8070/eureka/apps/license-service",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"eureka",
+								"apps",
+								"license-service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization-Service Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8070/eureka/apps/organization-service",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"eureka",
+								"apps",
+								"organization-service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Demo-Gateway Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8070/eureka/apps/demo-gateway",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"eureka",
+								"apps",
+								"demo-gateway"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Keycloak Server Token Requests",
+			"item": [
+				{
+					"name": "Admin Token Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "J7snBmC4Rw3z5AkZL16hwZOnEfVa0MH9",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mock-software-licensing-project",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "josephmorgan84",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Password123!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/licensing-microservice-realm/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"licensing-microservice-realm",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Token Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "JAu8Zpj9rB6ibRHkKZ7Waasfyr2bTnPB",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mock-software-licensing-project",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "mockuser123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Password123!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/licensing-microservice-realm/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"licensing-microservice-realm",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
